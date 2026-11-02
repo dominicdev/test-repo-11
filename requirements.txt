@@ -1,0 +1,9 @@
+google-genai>=1.0
+ddgs
+httpx
+beautifulsoup4
+python-dotenv
+google-cloud-firestore
+fastapi
+uvicorn[standard]
+nbformat

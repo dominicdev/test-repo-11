@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent2027"
+version = "0.1.0"
+description = "Workshop code: build an agent harness from scratch with the Gemini API"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=1.0",
+    "ddgs",
+    "httpx",
+    "beautifulsoup4",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+firestore = ["google-cloud-firestore"]
+serve = ["fastapi", "uvicorn[standard]", "google-cloud-firestore"]
+
+[tool.setuptools.packages.find]
+include = ["agent2027*"]
+
+[tool.setuptools.package-data]
+agent2027 = ["data/*.json"]
